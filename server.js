@@ -7,7 +7,7 @@ const ShortUrl = require('./models/shortUrl')
 
 const port = process.env.PORT || 3000
 
-mongoose.connect('mongodb://127.0.0.1:27017/urlShortener', {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
